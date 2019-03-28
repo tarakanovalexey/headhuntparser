@@ -20,53 +20,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Headhunt parser</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
+<body class="w3-light-grey">
 <!-- header -->
 <div>
-    <h1 align="center">Сайт для парсинга:</h1>
+    <h1 class="w3-container w3-blue-grey w3-opacity w3-center">Сайт для парсинга:</h1>
 </div>
 
 <div>       <!-- content -->
 
     <div align="center">    <!-- buttons holder -->
-        <button onclick="location.href='/list'">Авторизация</button>
-        <button onclick="location.href='/add'">Регистрация</button>
+        <button onclick="location.href='/list'">Список пользователей</button>
+
+        <button onclick="location.href='/add'">Добавить пользователя</button>
     </div>
     <br>
 
     <div align="center">
         <table>
             <tr>
-                <th>Возраст</th>
-                <th>Зарплата</th>
-                <th>Город</th>
+                <th align="center">Возраст</th>
+                <th align="center">Зарплата</th>
+                <th align="center">Город</th>
             </tr>
-            <tr><td>От</td><td>От</td><td>Москва(dropdown)</td></tr>
-            <tr><td>До</td><td>До</td><td></td></tr>
+            <tr>
+                <td>От <input type="text" minlength="2" maxlength="2" size="3"></td>
+                <td>От <input type="text" maxlength="7" size="8"></td>
+                <td>
+                    <select name="City">
+                        <option value="Moscow"> Москва </option>
+                        <option value="SPB"> Санкт-Петербург </option>
+                        <option value="Novosibirsk"> Новосибирск </option>
+                        <option value="Ekaterinburg"> Екатеринбург </option>
+                        <option value="NN"> Нижний Новгород </option>
+                        <option value="Kazan"> Казань </option>
+                        <option value="Chelyabinsk"> Челябинск </option>
+                        <option value="Omsk"> Омск </option>
+                        <option value="Samara"> Самара </option>
+                        <option value="Rostov"> Ростов-на-Дону </option>
+                        <option value="Ufa"> Уфа </option>
+                        <option value="Krasnoyarsk"> Красноярск </option>
+                        <option value="Voronezh"> Воронеж </option>
+                        <option value="Perm"> Пермь </option>
+                        <option value="Volgograd"> Волгоград </option>
+                        <option value="Krasnodar"> Краснодар </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>До <input type="text" minlength="2" maxlength="2" size="3"></td>
+                <td>До <input type="text" maxlength="7" size="8"></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div align="center">
+        <table>
+            <tr>
+                <th>HeadHunter</th>
+                <th>SuperJob</th>
+                <th>Avito</th>
+            </tr>
+            <tr>
+                <td>
+                    <button style="color:white;background-color: white" onclick="window.location.href='https://hh.ru/search/resume?text=&area=1&clusters=true&exp_period=all_time&logic=normal&pos=full_text'">
+                        <img src="https://i.hh.ru/logos/svg/hh.ru-small.svg" width="150" height="50" alt="HeadHunter">
+                    </button>
+                </td>
+
+                <td>
+                    <button style="color:white;background-color: white" onclick="window.location.href='https://www.superjob.ru/resume/search_resume.html?sbmit=1'">
+                        <img src="https://img.superjob.ru/img/logotip/superjob_logo_450.gif?20180508" width="150" height="50" alt="SuperJob">
+                    </button>
+                </td>
+
+                <td>
+                    <button style="color:white;background-color: white" onclick="window.location.href='https://www.avito.ru/moskva/rezume?s_trg=11'">
+                        <img src="http://spb.spravka.city/public_files/company/logo/2441/logo-655461-sankt-peterburg.png" width="150" height="50"  alt="Avito">
+                    </button>
+                </td>
+
+            </tr>
+            <tr>
+                <td width="150" align="center">
+                    <button name="hhexcel" class="w3-button w3-small w3-round-xxlarge w3-indigo w3-hover-green" onclick="">
+                        Выгрузить в excel
+                    </button>
+                </td>
+
+                <td width="150" align="center">
+                    <button name="superjobexcel" class="w3-button w3-small w3-round-xxlarge w3-indigo w3-hover-green" onclick="">
+                        Выгрузить в excel
+                    </button>
+                </td>
+
+                <td width="150" align="center">
+                    <button class="w3-button w3-small w3-round-xxlarge w3-indigo w3-hover-green" name="avitoexcel" onclick="">
+                        Выгрузить в excel
+                    </button>
+                </td>
+            </tr>
         </table>
 
     </div>
 
 
     <div align="center">
-        <button onclick="window.location.href='https://hh.ru/search/resume?text=&area=1&clusters=true&exp_period=all_time&logic=normal&pos=full_text'">
-            <img src="https://i.hh.ru/logos/svg/hh.ru-small.svg" width="150" height="50" alt="HeadHunter">
-        </button>
-    </div>
-    <div align="center">
-        <button onclick="window.location.href='https://www.superjob.ru/resume/search_resume.html?sbmit=1'">
-            <img src="https://img.superjob.ru/img/logotip/superjob_logo_450.gif?20180508" width="150" height="50" alt="SuperJob">
-        </button>
-    </div>
-    <div align="center">
-        <button onclick="window.location.href='https://www.avito.ru/moskva/rezume?s_trg=11'">
-            <img src="https://www.freelancejob.ru/upload/419/57570978160947.jpg" width="150" height="50"  alt="Avito">
-        </button>
+
     </div>
 
 
 </div>
+
 </body>
 
 
